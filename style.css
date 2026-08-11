@@ -60,7 +60,19 @@ main p {
 
 .main{
     overflow-x: hidden;
+
 }
+
+
+@media (max-width: 370px) {
+   .hero  h1{
+        font-size: 3rem;
+    }
+
+}
+
+
+
 
 /***/
 
