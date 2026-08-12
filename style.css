@@ -63,15 +63,34 @@ main p {
 
 }
 
-
-@media (max-width: 370px) {
+@media (max-width:369px)  {
    .hero  h1{
-        font-size: 3rem;
+        font-size: 45px !important;
+        font-weight: bold;
     }
 
 }
 
 
+
+@media (min-width:370px) and (max-width:499px)  {
+   .hero  h1{
+        font-size: 65px !important;
+        font-weight: bold;
+    }
+
+}
+
+
+@media (min-width: 500px) and (max-width:1000px){
+   .hero  h1{
+        font-size: 5rem;
+        font-weight: bold;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+}
 
 
 /***/
