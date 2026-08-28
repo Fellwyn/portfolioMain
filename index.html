@@ -14,40 +14,102 @@
 
     <!-- Hello fellow devs! I am (front end/game) developer and I am looking for new positions! Portfolio and contact information: https://github.com/Fellwyn -->
 
-    <div class="mx-auto text-center hero">
+    <!--div class="mx-auto text-center hero">
         <div class="headerContainer">
-
             <h1 class="">Site under construction</h1>
-
-
+             <h5>Fellwyn</h5>
+            <p class="text-light">Frontend-focused developer with passion for building websites and creative things. Also interested in game development</p>
         </div>
-    </div>
+    </div-->
 
-
+<div class="containerX mx-auto text-center hero">
+  <h1 class="h1">Fellwyn</h1>
+  <div class="mask"></div>
+  <div class="magnifier"></div>
+</div>
 
 
         <main class="mt-5 mb-5">
 
         <div class="text-center">
-             <p>8/2026</p>
-         <p>Contact: kooditunturi (at) gmail.com</p>
+            <p>8/2026</p>
+            <p>Contact: kooditunturi (at) gmail.com</p>
 
-         <p>Latest project:</p>
+            <h3 class="my-5">Latest projects:</h3>
         </div>
 
 
-            <div class="card mx-auto">
-            <img src="kita.png" class="card-img-top" alt="web-page portfolio image">
-            <div class="card-body text-center">
-                <h5 class="card-title"><a href="https://kitakaze.art/" class="" target="_blank">kitakaze.art</a></h5>
-                <!--p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p-->
-                <!--a href="#" class="btn btn-primary">Go somewhere</a-->
-            </div>
-            </div>
+<div class="d-flex  justify-content-md-center mt-5 cardsContainer">
+
+
+
+    <div class="card">
+      <img src="kita.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title text-center"><a href="https://kitakaze.art/">Kitakaze.art</a></h5>
+        <p class="card-text mt-3">Portfolio page</p>
+        <p>Tech: HTML, CSS, JS, BS, small CMS</p>
+      </div>
+    </div>
+    
+
+
+
+    <div class="card">
+      <img src="tree.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title text-center"><a href="https://www.hillusia.com/" target="_blank">Hillusia.com</a></h5>
+        <p class="card-text mt-3">Portfolio page</p>
+        <p>Tech: Wordpress</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="text-center mt-5 ">
+    <h6><a href="https://github.com/Fellwyn" target="_blank" class="text-dark">Github</a></h6>
+  </div>
             
         </main>
 
     
+<script>
+  const mask = document.querySelector('.mask');
+  const magnifier = document.querySelector('.magnifier');
+  const containerX = document.querySelector('.containerX');
+  const h1 = document.querySelector(".h1");
+
+  document.addEventListener('mousemove', (e) => {
+    const rect = containerX.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+
+    
+
+
+    mask.style.setProperty('--x', `${x}px`);
+    mask.style.setProperty('--y', `${y}px`);
+
+    
+
+    magnifier.style.left = `${x}px`;
+    magnifier.style.top = `${y}px`;
+    magnifier.style.transform = `translate(-50%, -50%) scale(1.2)`;
+
+
+    h1.style.setProperty('--x', `${x}px`);
+   h1.style.setProperty('--y', `${y}px`);
+ //   h1.style.left = `${x}px`;
+ //h1.style.top = `${y}px`;
+
+  });
+
+  document.addEventListener('mouseleave', () => {
+    magnifier.style.transform = `translate(-50%, -50%) scale(1)`;
+  });
+</script>
+
     
 
 
