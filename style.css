@@ -91,6 +91,13 @@ main p {
 
 }
 
+@media (min-width: 320px) and (max-widhth: 1000px){
+        .magnifier{
+        display: none;
+    }
+}
+
+
 @media (max-width:369px)  {
    .hero h1{
         font-size: 6rem !important;
@@ -125,9 +132,7 @@ main p {
         margin-left: 10px;
         margin-right: 10px;
     }
-    .magnifier{
-        display: none;
-    }
+
 }
 
 
